@@ -1,3 +1,4 @@
+import sys
 from maths_calculator import add, subtract, multiply, divide
 from scientific_calculator import sine, cosine, tangent, logarithm, exponential
 
@@ -25,5 +26,14 @@ def scientific_calculator():
     print("!! Thank You Scientific Calculator !!")
 
 if __name__ == "__main__":
-    maths_calculator()
-    scientific_calculator()
+    if len(sys.argv) > 1:
+        mode = sys.argv[1]
+        match mode:
+            case 'maths':
+                maths_calculator()
+            case 'scientific':
+                scientific_calculator()
+            case _:
+                print('Not Implemented !!')
+    else:
+        print('Please provide calculator mode')
