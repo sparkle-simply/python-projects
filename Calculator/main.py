@@ -34,6 +34,6 @@ if __name__ == "__main__":
             case 'scientific':
                 scientific_calculator()
             case _:
-                print('Not Implemented !!')
+                print('Calculator Mode Not Implemented !!')
     else:
         print('Please provide calculator mode')
