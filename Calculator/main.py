@@ -1,6 +1,7 @@
 import sys
 from maths_calculator import add, subtract, multiply, divide
 from scientific_calculator import sine, cosine, tangent, logarithm, exponential
+from ascii_calculator import char_to_ascii, ascii_to_char
 
 
 def maths_calculator():
@@ -25,6 +26,13 @@ def scientific_calculator():
     print("exp 0 =", exponential(0))
     print("!! Thank You Scientific Calculator !!")
 
+def ascii_calculator():
+    print("\nHi, ASCII Calculator")
+    print("ASCII (Hello) =", char_to_ascii('Hello'))
+    print("ASCII (Have a nice day!) =", char_to_ascii('Have a nice day!'))
+    print("ASCII (Thank you) =", char_to_ascii('Thank you'))
+    print("!! Thank You ASCII Calculator !!")
+
 if __name__ == "__main__":
     if len(sys.argv) > 1:
         mode = sys.argv[1]
@@ -33,6 +41,8 @@ if __name__ == "__main__":
                 maths_calculator()
             case 'scientific':
                 scientific_calculator()
+            case 'ascii':
+                ascii_calculator()
             case _:
                 print('Calculator Mode Not Implemented !!')
     else:
