@@ -2,6 +2,7 @@ import sys
 from maths_calculator import add, subtract, multiply, divide
 from scientific_calculator import sine, cosine, tangent, logarithm, exponential
 from ascii_calculator import char_to_ascii, ascii_to_char
+from roman_calculator import int_to_roman
 
 
 def maths_calculator():
@@ -33,6 +34,11 @@ def ascii_calculator():
     print("ASCII (Thank you) =", char_to_ascii('Thank you'))
     print("!! Thank You ASCII Calculator !!")
 
+def roman_calculator():
+    print("\nHi, Roman Calculator")
+    int_to_roman()
+    print("!! Thank You Roman Calculator !!")
+
 if __name__ == "__main__":
     if len(sys.argv) > 1:
         mode = sys.argv[1]
@@ -43,6 +49,8 @@ if __name__ == "__main__":
                 scientific_calculator()
             case 'ascii':
                 ascii_calculator()
+            case 'roman':
+                roman_calculator()
             case _:
                 print('Calculator Mode Not Implemented !!')
     else:

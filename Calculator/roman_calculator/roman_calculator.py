@@ -1,6 +1,6 @@
-def int_to_roman(num):
-    if not (0 < num < 4000):
-        raise ValueError("Input must be between 1 and 3999")
+def int_to_roman_conversion(num):
+    #if not (0 < num < 4000):
+    #    raise ValueError("Input must be between 1 and 3999")
 
     val = [
         1000, 900, 500, 400,
@@ -26,6 +26,6 @@ def int_to_roman(num):
 def int_to_roman():
     try:
         num = int(input("Enter a number to convert to Roman numeral: "))
-        print(f"Roman numeral: {int_to_roman(num)}")
+        print(f"Roman numeral: {int_to_roman_conversion(num)}")
     except ValueError as ve:
         print(f"Error: {ve}")
