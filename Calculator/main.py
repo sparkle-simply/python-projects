@@ -1,7 +1,7 @@
 import sys
 from maths_calculator import add, subtract, multiply, divide
 from scientific_calculator import sine, cosine, tangent, logarithm, exponential
-from ascii_calculator import char_to_ascii, ascii_to_char
+from ascii_calculator import char_to_ascii, ascii_to_char, ASCII_Calculator
 from roman_calculator import int_to_roman
 
 
@@ -33,6 +33,22 @@ def ascii_calculator():
     print("ASCII (Have a nice day!) =", char_to_ascii('Have a nice day!'))
     print("ASCII (Thank you) =", char_to_ascii('Thank you'))
     print("!! Thank You ASCII Calculator !!")
+
+    print("\nHi, ASCII Calculator Class Impl")
+    my_converter = ASCII_Calculator()
+
+    try:
+        word = "Welcome"
+        ascii_vals = my_converter.char_to_ascii(word)
+        print(f"'{word}' converted to ASCII: {ascii_vals}")
+
+        back_to_text = my_converter.ascii_to_char(ascii_vals)
+        print(f"{ascii_vals} converted back: '{back_to_text}'")
+
+    except ValueError as e:
+        print(f"Error: {e}")
+
+    print("!! Thank You ASCII Calculator Class Impl !!")
 
 def roman_calculator():
     print("\nHi, Roman Calculator")

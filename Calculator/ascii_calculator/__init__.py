@@ -1,1 +1,2 @@
 from .ascii_calculator import char_to_ascii, ascii_to_char
+from .ascii_calculator_class_impl import ASCII_Calculator
