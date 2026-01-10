@@ -1,4 +1,5 @@
 class Roman_Calculator:
+    @staticmethod
     def int_to_roman_conversion(num):
         if not (0 < num < 4000):
             raise ValueError("Input must be between 1 and 3999")
@@ -24,6 +25,7 @@ class Roman_Calculator:
             i += 1
         return roman_num
 
+    @staticmethod
     def int_to_roman():
         try:
             num = int(input("Enter a number to convert to Roman numeral: "))
