@@ -10,3 +10,9 @@ plt.show()
 x = np.random.uniform(5.0, 1.0, 100000)
 plt.hist(x, 100)
 plt.show()
+
+# random distribution with scatter view
+x = np.random.normal(5.0, 1.0, 1000)
+y = np.random.normal(10.0, 2.0, 1000)
+plt.scatter(x, y)
+plt.show()
