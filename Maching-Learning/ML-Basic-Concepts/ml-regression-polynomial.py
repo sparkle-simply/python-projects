@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+from sklearn.metrics import r2_score
 
 # polynomial regression plots line passing through data points in best way possible using their relationship
 
@@ -17,3 +18,10 @@ plt.scatter(x, y)
 plt.plot(customLine, customModel)
 # displaying diagram
 plt.show()
+
+# relationship measures as r-squared value that ranges from 0 to 1, where 0 means no relationship, and 1 means 100% related
+print(r2_score(y, customModel(x))
+
+# predicting speed of car that passes at 17:00 hours
+speed = customModel(17)
+print(speed)
