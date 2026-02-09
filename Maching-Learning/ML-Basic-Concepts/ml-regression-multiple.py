@@ -14,8 +14,19 @@ regr = linear_model.LinearRegression()
 regr.fit(X, y)
 
 # predict CO2 emission for car with weight: 2300 and volume: 1300
-predictedCO2 = regr.predict([[2300, 1300])
-print(predictedCO2)
+predictedCO21 = regr.predict([[2300, 1300])
+print(predictedCO21)
+
+# coefficient is factor that describes the relationship with unknown variable
+print(regr.coef_)
+
+# if we increase weight by 1000 kg, the outcome will change based on coefficient
+# here, predictedCO22 = predictedCO21 + (1000 * regr.coefficient(weight))
+predictedCO22 = regr.predict([[3300, 1300])
+print(predictedCO22)
+
+
+
 
 
 
