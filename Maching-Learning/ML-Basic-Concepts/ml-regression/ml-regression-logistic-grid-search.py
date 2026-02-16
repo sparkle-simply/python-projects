@@ -35,4 +35,5 @@ for choice in C:
 
 # We can see that the lower values of C performed worse than the base parameter of 1.
 # However, as we increased the value of C to 1.75 the model experienced increased accuracy.
+# Also, increasing C beyond one amount (example 1.75) does not help increase model accuracy.
 print(scores)
