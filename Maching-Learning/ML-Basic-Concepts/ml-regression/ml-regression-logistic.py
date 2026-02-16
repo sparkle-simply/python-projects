@@ -18,3 +18,16 @@ logr.fit(X,y)
 # predicting if student can top with cgpa 3.46
 predicted = logr.predict(numpy.array([3.46]).reshape(-1,1))
 print(predicted)
+
+# in logistic regression the coefficient is the expected change in log-odds of having the outcome per unit change in X
+log_odds = logr.coef_
+odds = numpy.exp(log_odds)
+print(odds)
+
+# probability computation for each outcome
+def logit2prob(logr,x):
+  log_odds = logr.coef_ * x + logr.intercept_
+  odds = numpy.exp(log_odds)
+  probability = odds / (1 + odds)
+  return(probability)
+print(logit2prob(logr, X))
