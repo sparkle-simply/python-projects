@@ -2,6 +2,7 @@ import pandas
 from sklearn import linear_model
 
 cars = pandas.read_csv("data.csv")
+# getting numeric representation of the categorical(represented as strings) variable
 ohe_cars = pandas.get_dummies(cars[['Car']])
 
 X = pandas.concat([cars[['Volume', 'Weight']], ohe_cars], axis=1)
@@ -14,3 +15,16 @@ regr.fit(X,y)
 predictedCO2 = regr.predict([[2300, 1300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0]])
 
 print(predictedCO2)
+
+# Dummifying
+
+colors = pd.DataFrame({'color': ['blue', 'red']})
+print(colors)
+
+dummies = pd.get_dummies(colors, drop_first=True)
+print(dummies)
+
+colors = pd.DataFrame({'color': ['blue', 'red', 'green']})
+dummies = pd.get_dummies(colors, drop_first=True)
+dummies['color'] = colors['color']
+print(dummies)
