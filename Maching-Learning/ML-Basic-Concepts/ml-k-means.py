@@ -18,8 +18,15 @@ for i in range(1,11):
     kmeans.fit(data)
     inertias.append(kmeans.inertia_)
 
+# The "elbow" on the graph above (where the interia becomes more linear) is at K=2
 plt.plot(range(1,11), inertias, marker='o')
 plt.title('Elbow method')
 plt.xlabel('Number of clusters')
 plt.ylabel('Inertia')
+plt.show()
+
+# The fitting of K-means algorithm one more time and plot the different clusters assigned to the data
+kmeans = KMeans(n_clusters=2)
+kmeans.fit(data)
+plt.scatter(x, y, c=kmeans.labels_)
 plt.show()
