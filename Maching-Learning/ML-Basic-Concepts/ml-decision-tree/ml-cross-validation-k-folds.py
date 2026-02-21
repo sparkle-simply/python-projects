@@ -1,6 +1,6 @@
 from sklearn import datasets
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.model_selection import KFold, cross_val_score
+from sklearn.model_selection import KFold, StratifiedKFold, cross_val_score
 
 # When adjusting models we are aiming to increase overall model performance on unseen data. Hyperparameter tuning can lead to much better performance on test sets.
 # However, optimizing parameters to the test set can lead information leakage causing the model to preform worse on unseen data. To correct for this we can perform cross validation.
@@ -13,9 +13,16 @@ clf = DecisionTreeClassifier(random_state=42)
 # The model is then trained on k-1 folds of training set.
 # The remaining fold is then used as a validation set to evaluate the model.
 k_folds = KFold(n_splits = 5)
-
 scores = cross_val_score(clf, X, y, cv = k_folds)
+print("Cross Validation Scores: ", scores)
+print("Average CV Score: ", scores.mean())
+print("Number of CV Scores used in Average: ", len(scores))
 
+# Stratified KFold
+# In cases where classes are imbalanced we need a way to account for the imbalance in both the train and validation sets.
+# To do so we can stratify the target classes, meaning that both sets will have an equal proportion of all classes.
+sk_folds = StratifiedKFold(n_splits = 5)
+scores = cross_val_score(clf, X, y, cv = sk_folds)
 print("Cross Validation Scores: ", scores)
 print("Average CV Score: ", scores.mean())
 print("Number of CV Scores used in Average: ", len(scores))
