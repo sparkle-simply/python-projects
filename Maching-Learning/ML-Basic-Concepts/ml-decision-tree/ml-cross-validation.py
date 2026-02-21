@@ -1,6 +1,6 @@
 from sklearn import datasets
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.model_selection import KFold, StratifiedKFold, LeaveOneOut, LeavePOut, cross_val_score
+from sklearn.model_selection import KFold, StratifiedKFold, LeaveOneOut, LeavePOut, ShuffleSplit, cross_val_score
 
 # When adjusting models we are aiming to increase overall model performance on unseen data. Hyperparameter tuning can lead to much better performance on test sets.
 # However, optimizing parameters to the test set can lead information leakage causing the model to preform worse on unseen data. To correct for this we can perform cross validation.
@@ -40,8 +40,17 @@ print("Number of CV Scores used in Average: ", len(scores))
 # Leave P Out (LOO)
 # Leave-P-Out is simply a nuanced difference to the Leave-One-Out idea,
 # in that we can select the number of p to use in our validation set.
-# lpo = LeavePOut(p=2)
-# scores = cross_val_score(clf, X, y, cv = lpo)
-# print("Cross Validation Scores: ", scores)
-# print("Average CV Score: ", scores.mean())
-# print("Number of CV Scores used in Average: ", len(scores))
+lpo = LeavePOut(p=2)
+scores = cross_val_score(clf, X, y, cv = lpo)
+print("Cross Validation Scores: ", scores)
+print("Average CV Score: ", scores.mean())
+print("Number of CV Scores used in Average: ", len(scores))
+
+# ShuffleSplit
+# ShuffleSplit leaves out a percentage of the data, not to be used in the train or validation sets.
+# To do so we must decide what the train and test sizes are, as well as the number of splits.
+ss = ShuffleSplit(train_size=0.6, test_size=0.3, n_splits = 5)
+scores = cross_val_score(clf, X, y, cv = ss)
+print("Cross Validation Scores: ", scores)
+print("Average CV Score: ", scores.mean())
+print("Number of CV Scores used in Average: ", len(scores))
