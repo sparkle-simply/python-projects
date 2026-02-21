@@ -1,6 +1,6 @@
 from sklearn import datasets
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.model_selection import KFold, StratifiedKFold, LeaveOneOut, cross_val_score
+from sklearn.model_selection import KFold, StratifiedKFold, LeaveOneOut, LeavePOut, cross_val_score
 
 # When adjusting models we are aiming to increase overall model performance on unseen data. Hyperparameter tuning can lead to much better performance on test sets.
 # However, optimizing parameters to the test set can lead information leakage causing the model to preform worse on unseen data. To correct for this we can perform cross validation.
@@ -36,3 +36,12 @@ scores = cross_val_score(clf, X, y, cv = loo)
 print("Cross Validation Scores: ", scores)
 print("Average CV Score: ", scores.mean())
 print("Number of CV Scores used in Average: ", len(scores))
+
+# Leave P Out (LOO)
+# Leave-P-Out is simply a nuanced difference to the Leave-One-Out idea,
+# in that we can select the number of p to use in our validation set.
+# lpo = LeavePOut(p=2)
+# scores = cross_val_score(clf, X, y, cv = lpo)
+# print("Cross Validation Scores: ", scores)
+# print("Average CV Score: ", scores.mean())
+# print("Number of CV Scores used in Average: ", len(scores))
