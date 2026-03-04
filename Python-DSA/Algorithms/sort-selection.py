@@ -1,3 +1,4 @@
+# The lowest value is identified and is placed at first position
 def selectionSort(mylist):
     n = len(mylist)
     for i in range(n):

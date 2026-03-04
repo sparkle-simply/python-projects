@@ -1,3 +1,4 @@
+# The highest value get's bubble up to end position
 def bubbleSort(mylist):
     n = len(mylist)
     for i in range(n-1):
