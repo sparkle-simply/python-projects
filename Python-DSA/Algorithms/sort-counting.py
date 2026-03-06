@@ -1,3 +1,6 @@
+# Counting Sort
+# A counting array is set up, the numbers are counted, and the new sorted array is created.
+
 def countingSort(arr):
   max_val = max(arr)
   count = [0] * (max_val + 1)
