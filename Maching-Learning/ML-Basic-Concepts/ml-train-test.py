@@ -1,3 +1,8 @@
+# Demonstration on how to create a polynomial regression model,
+# train it on a dataset,
+# evaluate its accuracy using the R² score (coefficient of determination),
+# and make predictions from the constructed model.
+
 import numpy
 import matplotlib.pyplot as plt
 from sklearn.metrics import r2_score
