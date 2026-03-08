@@ -1,4 +1,4 @@
-import numpy as np
+import numpy
 import matplotlib.pyplot as plt
 from sklearn.metrics import r2_score
 
@@ -34,4 +34,6 @@ r2 = r2_score(test_y, mymodel(test_x))
 print(r2)
 
 # predicting new values using model when the relationship is 'ok' with fetched r2_square value
+print(mymodel(4))
 print(mymodel(5))
+
