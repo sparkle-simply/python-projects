@@ -1,11 +1,11 @@
-import pandas
+import pandas as pd
 from sklearn import linear_model
 
-cars = pandas.read_csv("data.csv")
+cars = pd.read_csv("data.csv")
 # getting numeric representation of the categorical(represented as strings) variable
-ohe_cars = pandas.get_dummies(cars[['Car']])
+ohe_cars = pd.get_dummies(cars[['Car']])
 
-X = pandas.concat([cars[['Volume', 'Weight']], ohe_cars], axis=1)
+X = pd.concat([cars[['Volume', 'Weight']], ohe_cars], axis=1)
 y = cars['CO2']
 
 regr = linear_model.LinearRegression()
