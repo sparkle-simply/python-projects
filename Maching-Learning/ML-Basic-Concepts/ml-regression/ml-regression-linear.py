@@ -13,10 +13,10 @@ def computeY(x):
     return x * slope + intercept
 
 # mapping based on line regression
-customModel = list(map(computeY(x), x)
+customModel = list(map(computeY, x))
 
 plt.scatter(x, y)
-plt.plot(x, computeY)
+plt.plot(x, customModel, color='red')
 plt.show()
 
 # prediction car speed that is 10 years old now
