@@ -1,4 +1,4 @@
-import numpy as
+import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score, confusion_matrix, roc_auc_score, roc_curve
 
