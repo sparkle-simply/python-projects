@@ -10,4 +10,4 @@ def selectionSort(mylist):
     return mylist
 
 mylist = [64, 32, 9, 7, 12, 11, 76, 19]
-print(selectionSort(mylist)
+print(selectionSort(mylist))
