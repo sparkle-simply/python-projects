@@ -16,6 +16,6 @@ def countingSort(arr):
 
   return arr
 
-mylist = [4, 2, 2, 6, 3, 3, 1, 6, 5, 2, 3]
+mylist = [4, 2, 2, 6, 3, 3, 1, 6, 5, 2, 3, 1]
 mysortedlist = countingSort(mylist)
 print(mysortedlist)
