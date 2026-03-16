@@ -12,5 +12,5 @@ def bubbleSort(mylist):
     return mylist
 
 
-mylist = [7, 3, 9, 12, 11]
+mylist = [7, 3, 9, 12, 11, 20, 1]
 print(bubbleSort(mylist))
