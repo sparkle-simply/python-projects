@@ -1,5 +1,5 @@
 mylist = [3, 7, 2, 9, 5, 1, 8, 4, 6]
-x = 4
+x = 5
 
 # finding the index of the element if present in list
 def linearSearch(arr, targetVal):
