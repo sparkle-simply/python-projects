@@ -13,7 +13,7 @@ def radixSort(mylist):
             bucketIndex = ( val // exp ) % 10
             radixArray[bucketIndex].append(val)
 
-        while bucket in radixArray:
+        for bucket in radixArray:
             while len(bucket) > 0:
                 mylist.append(bucket.pop())
 
