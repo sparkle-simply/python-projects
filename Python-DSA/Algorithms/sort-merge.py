@@ -28,5 +28,5 @@ def merge(left, right):
   return result
 
 mylist = [3, 7, 6, -10, 15, 23.5, 55, -13]
-mysortedlist = mergeSort(mylist)
+mysortedlist = mergeSort(mylist, 0, len(mylist)-1)
 print("Sorted array:", mysortedlist)
