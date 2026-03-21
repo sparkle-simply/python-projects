@@ -65,10 +65,12 @@ traverseAndPrint(node1)
 newNode = Node(97)
 node1 = insertNodeAtPosition(node1, newNode, 2)
 
-print("\nAfter insertion:")
+print(f"\nAfter inserting: {newNode.data}")
 traverseAndPrint(node1)
 
 # Delete node4
 node1 = deleteSpecificNode(node1, node4)
+print(f"\nAfter deleting: {node4.data}")
+traverseAndPrint(node1)
 
 print("The lowest value in the linked list is:", findLowestValue(node1))
