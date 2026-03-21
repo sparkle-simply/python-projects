@@ -43,8 +43,10 @@ class Queue:
   def printQueue(self):
     temp = self.front
     while temp:
-      print(temp.data, end=" -> ")
+      print(temp.data, end="")
       temp = temp.next
+      if temp:
+          print("", end=" -> ")
     print()
 
 # Create a queue
