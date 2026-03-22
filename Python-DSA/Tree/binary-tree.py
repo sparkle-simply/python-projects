@@ -49,11 +49,11 @@ def postOrderTraversal(node):
   postOrderTraversal(node.right)
   print(node.data, end=", ")
 
-print("Pre-order Traversal")
+print("\nPre-order Traversal")
 preOrderTraversal(nodeA)
 
-print("In-order Traversal")
+print("\nIn-order Traversal")
 inOrderTraversal(nodeA)
 
-print("Post-order Traversal")
+print("\nPost-order Traversal")
 postOrderTraversal(nodeA)
