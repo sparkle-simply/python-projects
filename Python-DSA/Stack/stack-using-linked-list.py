@@ -37,8 +37,10 @@ class Stack:
   def traverseAndPrint(self):
     currentNode = self.head
     while currentNode:
-      print(currentNode.value, end=" -> ")
+      print(currentNode.value, end="")
       currentNode = currentNode.next
+      if currentNode:
+        print("", end=" -> ")
     print()
 
 myStack = Stack()
