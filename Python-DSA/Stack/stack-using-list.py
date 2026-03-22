@@ -26,7 +26,7 @@ myStack = Stack()
 
 myStack.push('A')
 myStack.push('B')
-myStack.push('C')g
+myStack.push('C')
 
 print("Stack: ", myStack.stack)
 print("Pop: ", myStack.pop())
