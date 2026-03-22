@@ -108,7 +108,7 @@ def delete(node, data):
 
 # Inserting nodes
 root = None
-letters = ['C', 'B', 'E', 'A', 'D', 'H', 'G', 'F']
+letters = ['C', 'B', 'E', 'A', 'D', 'H', 'G', 'F', 'I']
 for letter in letters:
   root = insert(root, letter)
 
